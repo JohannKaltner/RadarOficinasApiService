@@ -56,7 +56,7 @@ exports.create = function(req, res) {
 
 exports.getPagination = function(req, res){
   const pagina =  req.query.page 
-   Oficinas.getPagination(pagina , 10, function(err, oficina) {
+   Oficinas.getPagination(pagina , 5, function(err, oficina) {
      if (err)
     res.send(err);
     res.json(oficina);

@@ -90,7 +90,7 @@ Oficinas.findBairro = function (result){
 
 Oficinas.findAll = function (result) {
        
-    dbConn.query("Select * from oficinas", function (err, res) {
+    dbConn.query("Select * from oficinas limit 20", function (err, res) {
         if(err) {
             console.log("error: ", err);
             result(null, err);
